@@ -18,7 +18,12 @@ const config = {
 				md: "2rem",
 			},
 		},
-		extend: {},
+		extend: {
+			fontFamily: {
+				primary: "var(--font-primary)",
+				secondary: "var(--font-secondary)",
+			},
+		},
 	},
 	plugins: [],
 };

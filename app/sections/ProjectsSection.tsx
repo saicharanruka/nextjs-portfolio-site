@@ -3,9 +3,10 @@ import lightSaasLandingPage from "@/app/assets/images/light-saas-landing-page.pn
 import aiStartupLandingPage from "@/app/assets/images/ai-startup-landing-page.png";
 import CheckIcon from "@/app/assets/icons/check-circle.svg";
 import ArrowTRIcon from "@/app/assets/icons/arrow-up-right.svg";
-import grainImage from "@/app/assets/images/grain.jpg";
 
 import Image from "next/image";
+import SectionHeader from "../components/SectionHeader";
+import Card from "../components/Card";
 
 const portfolioProjects = [
 	{
@@ -48,34 +49,20 @@ const portfolioProjects = [
 
 const Projects = () => {
 	return (
-		<section className="pb-16 lg:py-24">
+		<section className="pb-16 lg:py-20">
 			<div className="container">
-				<div className="flex justify-center">
-					<p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
-						Real-world Results
-					</p>
-				</div>
+				<SectionHeader
+					tagline="Real-world Results"
+					heading="Featured Projects"
+					para="See how I transformed concepts into engaging digital experiences"
+				/>
 
-				<h2 className="py-6 font-primary text-3xl md:text-5xl font-semibold text-center">
-					Featured Projects
-				</h2>
-				<p className="mt-4 md:text-lg lg:text-xl text-center text-white/40 max-w-md mx-auto">
-					See how I transformed concepts into engaging digital experiences
-				</p>
 				<div className="flex flex-col gap-10 mt-10 md:mt-20">
 					{portfolioProjects.map((project, id) => (
-						<div
-							className="overflow-hidden bg-gray-800 rounded-3xl gap-5 relative z-0 after:content-[''] after:absolute
-							  after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:z-10 after:outline-white/20
-							  pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 px-8 after:pointer-events-none"
+						<Card
+							className="pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 px-8 "
 							key={id}
 						>
-							<div
-								className="absolute inset-0 -z-30 opacity-5"
-								style={{
-									backgroundImage: `url(${grainImage.src})`,
-								}}
-							></div>
 							<div className="lg:grid lg:grid-cols-2 lg:gap-16">
 								<div className="lg:pb-16">
 									<div
@@ -122,7 +109,7 @@ const Projects = () => {
 									/>
 								</div>
 							</div>
-						</div>
+						</Card>
 					))}
 				</div>
 			</div>

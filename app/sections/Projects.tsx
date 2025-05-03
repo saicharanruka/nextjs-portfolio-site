@@ -60,7 +60,7 @@ const Projects = () => {
 					Featured Projects
 				</h2>
 				<p className="mt-4 md:text-lg lg:text-xl text-center text-white/40 max-w-md mx-auto">
-					See how I tranformed concepts into engaging digital experiences
+					See how I transformed concepts into engaging digital experiences
 				</p>
 				<div className="flex flex-col gap-10 mt-10 md:mt-20">
 					{portfolioProjects.map((project, id) => (

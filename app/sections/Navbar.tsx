@@ -1,6 +1,6 @@
 const Navbar = () => {
 	return (
-		<div className="flex justify-center items-center relative w-full top-3 z-50">
+		<div className="flex justify-center items-center fixed w-full top-3 z-50">
 			<nav className="flex gap-1 p-0.5 border border-white/15 bg-white/10 backdrop-blur rounded-full">
 				<a className="nav-item" href="#">
 					Home

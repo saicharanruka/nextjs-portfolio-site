@@ -3,6 +3,7 @@ import { Poppins, Lato } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "./sections/Navbar";
+import Footer from "./sections/Footer";
 
 const lato = Lato({
 	subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
 			>
 				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);

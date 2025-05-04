@@ -1,15 +1,17 @@
-import Hero from "./sections/HeroSection";
-import Projects from "./sections/ProjectsSection";
-import TapeSection from "./sections/TapeSection";
-import TestimonialsSection from "./sections/TestimonialsSection";
+import About from "./sections/About";
+import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
+import Tape from "./sections/Tape";
+import Testimonials from "./sections/Testimonials";
 
 export default function Home() {
 	return (
 		<div>
 			<Hero />
 			<Projects />
-			<TapeSection />
-			<TestimonialsSection />
+			<Tape />
+			<Testimonials />
+			<About />
 		</div>
 	);
 }

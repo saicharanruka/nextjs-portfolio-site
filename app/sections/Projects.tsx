@@ -6,7 +6,7 @@ import ArrowTRIcon from "@/app/assets/icons/arrow-up-right.svg";
 
 import Image from "next/image";
 import SectionHeader from "../components/SectionHeader";
-import Card from "../components/Card";
+import Card from "../components/card/Card";
 
 const portfolioProjects = [
 	{

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 import SectionHeader from "../components/SectionHeader";
 // import grainImage from "@/app/assets/images/grain.jpg";
-import Card from "../components/Card";
+import Card from "../components/card/Card";
 
 const testimonials = [
 	{
@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
 					{testimonials.map((testimonial) => (
 						<Card
 							key={testimonial.name}
-							className="max-w-xs md:p-8 md:max-w-md"
+							className="max-w-xs md:p-8 md:max-w-md p-6"
 						>
 							<div className="flex items-center gap-2">
 								<div className="size-14 bg-gray-700 inline-flex flex-shrink-0 rounded-full">

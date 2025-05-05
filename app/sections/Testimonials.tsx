@@ -8,6 +8,7 @@ import Image from "next/image";
 import SectionHeader from "../components/SectionHeader";
 // import grainImage from "@/app/assets/images/grain.jpg";
 import Card from "../components/card/Card";
+import { Fragment } from "react";
 
 const testimonials = [
 	{
@@ -50,36 +51,40 @@ const TestimonialsSection = () => {
 				heading="Featured Projects"
 				para="See how I transformed concepts into engaging digital experiences"
 			/>
-			<div className="mt-16 lg:mt-24 flex overflow-x-clip container [mask-image:linear-gradient(to_right,_transparent,_black_10%,_black_90%,_transparent)]">
-				<div className="flex gap-32 flex-none">
-					{testimonials.map((testimonial) => (
-						<Card
-							key={testimonial.name}
-							className="max-w-xs md:p-8 md:max-w-md p-6"
-						>
-							<div className="flex items-center gap-2">
-								<div className="size-14 bg-gray-700 inline-flex flex-shrink-0 rounded-full">
-									<Image
-										src={testimonial.avatar}
-										alt={testimonial.name}
-										className="max-h-full"
-									/>
-								</div>
+			<div className="mt-12 lg:mt-20 flex overflow-x-clip container [mask-image:linear-gradient(to_right,_transparent,_black_10%,_black_90%,_transparent)] py-4 group ">
+				<div className="flex gap-32 flex-none animate-move-left [animation-duration:60s] hover:[animation-play-state:paused] pr-32">
+					{[...new Array(2)].fill(0).map((_, idx) => (
+						<Fragment key={idx}>
+							{testimonials.map((testimonial) => (
+								<Card
+									key={testimonial.name}
+									className="max-w-xs md:p-8 md:max-w-md p-6 hover:-rotate-1 transition duration-300"
+								>
+									<div className="flex items-center gap-2">
+										<div className="size-14 bg-gray-700 inline-flex flex-shrink-0 rounded-full">
+											<Image
+												src={testimonial.avatar}
+												alt={testimonial.name}
+												className="max-h-full"
+											/>
+										</div>
 
-								<div className="flex flex-col p-2">
-									<div className="text-xl font-semibold font-primary">
-										{testimonial.name}
+										<div className="flex flex-col p-2">
+											<div className="text-xl font-semibold font-primary">
+												{testimonial.name}
+											</div>
+											<div className="text-sm text-white/40">
+												{testimonial.position}
+											</div>
+										</div>
 									</div>
-									<div className="text-sm text-white/40">
-										{testimonial.position}
-									</div>
-								</div>
-							</div>
 
-							<div className="mt-4 md:mt-6 text-sm md:text-base">
-								{testimonial.text}
-							</div>
-						</Card>
+									<div className="mt-4 md:mt-6 text-sm md:text-base">
+										{testimonial.text}
+									</div>
+								</Card>
+							))}
+						</Fragment>
 					))}
 				</div>
 			</div>

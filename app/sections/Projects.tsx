@@ -60,8 +60,11 @@ const Projects = () => {
 				<div className="flex flex-col gap-10 mt-10 md:mt-20">
 					{portfolioProjects.map((project, id) => (
 						<Card
-							className="pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 px-8 "
 							key={id}
+							className="pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 px-8 sticky"
+							style={{
+								top: `${64 + id * 40}px`,
+							}}
 						>
 							<div className="lg:grid lg:grid-cols-2 lg:gap-16">
 								<div className="lg:pb-16">

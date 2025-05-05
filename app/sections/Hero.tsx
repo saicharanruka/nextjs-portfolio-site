@@ -20,30 +20,86 @@ const Hero = () => {
 				<div className="size-[820px] hero-ring"></div>
 				<div className="size-[1020px] hero-ring"></div>
 				<div className="size-[1220px] hero-ring"></div>
-				<HeroOrbit size={800} rotation={-72}>
-					<StarIcon className="size-28 text-emerald-300" />
-				</HeroOrbit>
-				<HeroOrbit size={550} rotation={20}>
-					<StarIcon className="size-12 text-emerald-300" />
-				</HeroOrbit>
-				<HeroOrbit size={590} rotation={98}>
-					<StarIcon className="size-8 text-emerald-300" />
-				</HeroOrbit>
-				<HeroOrbit size={430} rotation={-20}>
+				{/* 
+					shouldOrbit?: boolean;
+					orbitDuration?: string;
+					shouldSpin?: boolean;
+					spinDuration?: number;
+				 */}
+				<HeroOrbit
+					size={430}
+					rotation={-20}
+					shouldOrbit
+					orbitDuration="30s"
+					shouldSpin
+					spinDuration="3s"
+				>
 					<SparkleIcon className="size-8 text-emerald-300/30" />
 				</HeroOrbit>
-				<HeroOrbit size={440} rotation={75}>
+				<HeroOrbit
+					size={440}
+					rotation={75}
+					shouldOrbit
+					orbitDuration="32s"
+					shouldSpin
+					spinDuration="3s"
+				>
 					<SparkleIcon className="size-5 text-emerald-300/30" />
 				</HeroOrbit>
-				<HeroOrbit size={500} rotation={180}>
+				<HeroOrbit
+					size={500}
+					rotation={180}
+					shouldOrbit
+					orbitDuration="34s"
+					shouldSpin
+					spinDuration="10s"
+				>
 					<SparkleIcon className="size-10 text-emerald-300/30" />
 				</HeroOrbit>
-				<HeroOrbit size={710} rotation={147}>
+				<HeroOrbit
+					size={550}
+					rotation={20}
+					shouldOrbit
+					orbitDuration="36s"
+					shouldSpin
+					spinDuration="6s"
+				>
+					<StarIcon className="size-12 text-emerald-300" />
+				</HeroOrbit>
+				<HeroOrbit
+					size={590}
+					rotation={98}
+					shouldOrbit
+					orbitDuration="38s"
+					shouldSpin
+					spinDuration="10s"
+				>
+					<StarIcon className="size-8 text-emerald-300" />
+				</HeroOrbit>
+				<HeroOrbit
+					size={710}
+					rotation={147}
+					shouldOrbit
+					orbitDuration="40s"
+					shouldSpin
+					spinDuration="6s"
+				>
 					<SparkleIcon className="size-14 text-emerald-300/30" />
 				</HeroOrbit>
-				<HeroOrbit size={720} rotation={85}>
+				<HeroOrbit size={720} rotation={85} shouldOrbit orbitDuration="42s">
 					<div className="size-3 rounded-full bg-emerald-300/30"></div>
 				</HeroOrbit>
+				<HeroOrbit
+					size={800}
+					rotation={-72}
+					shouldOrbit
+					orbitDuration="44s"
+					shouldSpin
+					spinDuration="10s"
+				>
+					<StarIcon className="size-28 text-emerald-300" />
+				</HeroOrbit>
+
 				{/* Add more circles */}
 			</div>
 			<div className="container">
@@ -53,13 +109,13 @@ const Hero = () => {
 						className="size-[100px]"
 						alt="Computer memoji"
 					/>
-					<div className="bg-gray-950 border rounded-lg border-gray-800 px-4 py-1.5 inline-flex items-center gap-2 shadow-lg shadow-neutral-900">
+					<div className="bg-gray-950 border rounded-lg border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 shadow-lg shadow-neutral-900">
 						<div className="relative flex size-2.5 ">
-							<span className="absolute inline-flex h-full w-full animate-ping duration-500 rounded-full bg-red-400 opacity-75"></span>
-							<span className="relative inline-flex size-2.5 rounded-full bg-red-500"></span>
+							<span className="absolute inline-flex h-full w-full animate-ping-large duration-500 rounded-full bg-green-400 opacity-75"></span>
+							<span className="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
 						</div>
 						<div className="text-md font-semibold">
-							On a break <span className="text-xl">🛫</span>
+							Available for new projects <span className="text-xl"></span>
 						</div>
 					</div>
 				</div>
